@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OppsShadow — Shadowing paquetizado + analytics</title>
+  <meta name="description" content="OppsShadow convierte el shadowing en un producto medible: observación estructurada + analítica digital para reducir fricción, acelerar adopción y demostrar ROI en ERP, IA y automatización." />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fuentes corporativas -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            display: ['Manrope', 'Inter', 'ui-sans-serif']
+          },
+          colors: {
+            brand: { DEFAULT:'#6C5CE7', dark:'#4c3fbe' },
+            accent: { DEFAULT:'#06D6A0', dark:'#059e78' },
+            ink: '#0F172A'
+          },
+          boxShadow: {
+            soft:'0 10px 30px rgba(15,23,42,.08)',
+            bold:'0 18px 45px rgba(15,23,42,.12)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html{scroll-behavior:smooth}
+    .gradient-hero{background: radial-gradient(1200px 600px at 10% 10%, rgba(108,92,231,.18), transparent 50%),
+                              radial-gradient(800px 600px at 90% 0%, rgba(6,214,160,.15), transparent 40%);}
+    .brand-gradient{background: linear-gradient(135deg, #6C5CE7 0%, #8B5CF6 40%, #06D6A0 100%)}
+    .blob{filter: blur(50px); opacity:.35}
+  </style>
+</head>
+<body class="bg-white text-ink antialiased font-sans">
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl brand-gradient"></div>
+          <span class="font-display text-lg font-extrabold tracking-tight">OppsShadow</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#como-funciona" class="hover:text-brand">Cómo funciona</a>
+          <a href="#segmentos" class="hover:text-brand">Segmentos</a>
+          <a href="#beneficios" class="hover:text-brand">Beneficios</a>
+          <a href="#comparativa" class="hover:text-brand">Comparativa</a>
+          <a href="#roadmap" class="hover:text-brand">Plan piloto</a>
+          <a href="#galeria" class="hover:text-brand">Imágenes</a>
+          <a href="#contacto" class="px-4 py-2 rounded-xl text-white brand-gradient shadow-bold">Solicitar demo</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden p-2 rounded-md text-slate-600 hover:bg-slate-100" aria-label="Abrir menú">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobileMenu" class="md:hidden hidden border-t border-slate-100">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#como-funciona" class="py-2">Cómo funciona</a>
+        <a href="#segmentos" class="py-2">Segmentos</a>
+        <a href="#beneficios" class="py-2">Beneficios</a>
+        <a href="#comparativa" class="py-2">Comparativa</a>
+        <a href="#roadmap" class="py-2">Plan piloto</a>
+        <a href="#galeria" class="py-2">Imágenes</a>
+        <a href="#contacto" class="py-2 px-3 rounded-lg text-white brand-gradient w-max">Solicitar demo</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden gradient-hero">
+    <div class="absolute -top-10 -left-10 w-72 h-72 rounded-full brand-gradient blob"></div>
+    <div class="absolute -bottom-10 -right-10 w-80 h-80 rounded-full brand-gradient blob"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 md:pt-20 pb-10 md:pb-16">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-indigo-50 text-brand px-3 py-1 text-xs font-semibold">
+            <span class="w-2 h-2 rounded-full bg-brand"></span> Shadowing paquetizado + analytics
+          </span>
+          <h1 class="mt-5 text-4xl md:text-5xl font-display font-extrabold leading-tight">
+            Reduce fricción y acelera la adopción de tu <span class="text-brand">ERP</span>
+          </h1>
+          <p class="mt-5 text-lg text-slate-700">
+            OppsShadow combina <strong>observación estructurada</strong> y <strong>analítica digital</strong> para detectar cuellos de botella reales,
+            crear <strong>playbooks por rol</strong> y demostrar <strong>ROI</strong> en semanas.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contacto" class="px-5 py-3 rounded-xl text-white brand-gradient shadow-bold font-semibold">Solicitar demo</a>
+            <a href="#como-funciona" class="px-5 py-3 rounded-xl border border-slate-200 hover:bg-slate-50">Ver cómo funciona</a>
+          </div>
+          <div class="mt-6 text-sm text-slate-600">Contacto: <a class="underline hover:text-brand" href="mailto:mgerico@gmail.com">mgerico@gmail.com</a></div>
+        </div>
+        <div class="relative">
+          <div class="rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+            <img class="w-full h-[360px] object-cover" src="mujeres-sonrientes-de-tiro-medio-trabajando-juntas.jpg" alt="Equipo colaborando con tablet y cuaderno" />
+          </div>
+          <div class="absolute -bottom-6 -left-6 bg-white/95 rounded-2xl p-4 border border-slate-200 shadow-soft w-[270px]">
+            <p class="text-sm text-slate-700">Observación + datos de uso → <span class="font-semibold">Playbooks por rol</span> y <span class="font-semibold">quick wins</span>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CINTA DE VALOR -->
+  <section class="py-10 border-t border-slate-100 bg-gradient-to-r from-indigo-50 via-white to-emerald-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <p class="text-3xl font-display font-extrabold text-brand">+40%</p>
+          <p class="mt-1 text-slate-600">Usuarios activos adoptando mejoras</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <p class="text-3xl font-display font-extrabold text-brand">−28%</p>
+          <p class="mt-1 text-slate-600">Tiempo medio por proceso</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <p class="text-3xl font-display font-extrabold text-brand">−35%</p>
+          <p class="mt-1 text-slate-600">Errores en tareas críticas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">Cómo funciona OppsShadow</h2>
+        <p class="mt-3 text-slate-700">MVP validable en 2–3 semanas. Diseñado para atacar pains de usabilidad, sobrecarga y comunicación.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="pines-coloridos-y-mapa-de-hilos.jpg" alt="Mapa de hilos" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">1) Elegir roles críticos</h3>
+          <p class="mt-2 text-slate-600">Contabilidad, logística, supervisión: dónde duele más hoy. Priorización basada en impacto y riesgo.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="vista-lateral-sonriente-colegas-trabajando.jpg" alt="Colaboración" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">2) Shadowing estructurado</h3>
+          <p class="mt-2 text-slate-600">Observación 1–2 h por rol + registro de fricciones, dudas, pasos reales y cargas duplicadas.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="Captura de pantalla 2025-09-30 185243.png" alt="HUD futurista" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">3) Analítica digital</h3>
+          <p class="mt-2 text-slate-600">Métricas de uso (tiempos, clics, errores) vía DAP/ERP para objetivar percepciones.</p>
+        </div>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="mujer-disgustada-en-el-trabajo.jpg" alt="Fricciones" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">4) Cruce de hallazgos</h3>
+          <p class="mt-2 text-slate-600">Insights accionables: qué cambiar, en qué orden y con qué esfuerzo.</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="User persona 1.png" alt="User Persona 1" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">5) Playbooks por rol</h3>
+          <p class="mt-2 text-slate-600">Guías prácticas y entrenables en-app (paso a paso, tips, errores frecuentes).</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 shadow-soft bg-white">
+          <img src="representacion-de-persona-que-lleva-una-carga.jpg" alt="Carga reducida" class="w-full h-36 object-cover rounded-xl mb-4">
+          <h3 class="font-semibold">6) Medir mejoras</h3>
+          <p class="mt-2 text-slate-600">Revisiones quincenales: errores ↓, tiempo ↓, satisfacción ↑; decisiones informadas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTOS -->
+  <section id="segmentos" class="py-20 bg-gradient-to-br from-indigo-50 via-white to-emerald-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">Hecho para tus equipos</h2>
+        <p class="mt-3 text-slate-700">Cinco perfiles, un objetivo: adopción real con menos fricción.</p>
+      </div>
+
+      <div class="mt-10 grid lg:grid-cols-5 gap-6">
+        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Usuarios finales</h3>
+          <p class="mt-2 text-sm text-slate-600">Menos pasos, menos errores, ayuda “just in time”.</p>
+          <ul class="mt-3 text-sm text-slate-600 list-disc pl-4 space-y-1">
+            <li>Micro-playbooks por rol</li><li>Sandbox seguro</li><li>Soporte peer-to-peer</li>
+          </ul>
+        </article>
+        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Mandos intermedios</h3>
+          <p class="mt-2 text-sm text-slate-600">KPIs de adopción y quick wins.</p>
+          <ul class="mt-3 text-sm list-disc pl-4 space-y-1 text-slate-600">
+            <li>Panel de adopción</li><li>Pilotos por proceso</li><li>Feedback estructurado</li>
+          </ul>
+        </article>
+        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">TI / Implementadores</h3>
+          <p class="mt-2 text-sm text-slate-600">Requerimientos claros y pruebas enfocadas.</p>
+          <ul class="mt-3 text-sm list-disc pl-4 space-y-1 text-slate-600">
+            <li>Hallazgos accionables</li><li>Testing guiado por procesos</li><li>Menos retrabajos</li>
+          </ul>
+        </article>
+        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Alta dirección</h3>
+          <p class="mt-2 text-sm text-slate-600">ROI visible y riesgo controlado.</p>
+          <ul class="mt-3 text-sm list-disc pl-4 space-y-1 text-slate-600">
+            <li>Impacto medible</li><li>Roadmap de mejoras</li><li>Evidencia para el comité</li>
+          </ul>
+        </article>
+        <article class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Change / RR. HH.</h3>
+          <p class="mt-2 text-sm text-slate-600">Adopción humana y sostenible.</p>
+          <ul class="mt-3 text-sm list-disc pl-4 space-y-1 text-slate-600">
+            <li>Comunicación clara</li><li>Gestión de resistencia</li><li>Clima y motivación</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUEVA SECCIÓN 1: COMPARATIVA -->
+  <section id="comparativa" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">¿Por qué OppsShadow frente a las alternativas?</h2>
+        <p class="mt-3 text-slate-700">Integramos lo mejor de la consultoría humana y la analítica digital. A diferencia de las DAPs y la formación tradicional, convertimos la realidad del puesto en <strong>mejoras medibles</strong> y <strong>playbooks vivos</strong>.</p>
+      </div>
+
+      <div class="mt-8 overflow-x-auto">
+        <table class="min-w-full bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-soft">
+          <thead class="bg-indigo-50">
+            <tr class="text-left">
+              <th class="px-4 py-3 text-sm font-semibold text-slate-700">Criterio</th>
+              <th class="px-4 py-3 text-sm font-semibold text-slate-700">OppsShadow</th>
+              <th class="px-4 py-3 text-sm font-semibold text-slate-700">DAP (WalkMe/Pendo/…)</th>
+              <th class="px-4 py-3 text-sm font-semibold text-slate-700">Consultoría clásica</th>
+              <th class="px-4 py-3 text-sm font-semibold text-slate-700">Formación estándar</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="px-4 py-3 text-sm">Observación en puesto</td>
+              <td class="px-4 py-3 text-sm font-medium text-ink">Sí, estructurada</td>
+              <td class="px-4 py-3 text-sm">No</td>
+              <td class="px-4 py-3 text-sm">Variable</td>
+              <td class="px-4 py-3 text-sm">No</td>
+            </tr>
+            <tr class="bg-slate-50/60">
+              <td class="px-4 py-3 text-sm">Analítica de uso</td>
+              <td class="px-4 py-3 text-sm font-medium text-ink">Sí (DAP/ERP)</td>
+              <td class="px-4 py-3 text-sm">Sí</td>
+              <td class="px-4 py-3 text-sm">Limitada</td>
+              <td class="px-4 py-3 text-sm">No</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-sm">Playbooks por rol</td>
+              <td class="px-4 py-3 text-sm font-medium text-ink">Sí, basados en evidencias</td>
+              <td class="px-4 py-3 text-sm">Parciales</td>
+              <td class="px-4 py-3 text-sm">Documento estático</td>
+              <td class="px-4 py-3 text-sm">Genérico</td>
+            </tr>
+            <tr class="bg-slate-50/60">
+              <td class="px-4 py-3 text-sm">Medición de impacto</td>
+              <td class="px-4 py-3 text-sm font-medium text-ink">Sí (errores, tiempo, adopción)</td>
+              <td class="px-4 py-3 text-sm">Uso, no negocio</td>
+              <td class="px-4 py-3 text-sm">Depende del proyecto</td>
+              <td class="px-4 py-3 text-sm">No</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 text-sm">Velocidad de “quick wins”</td>
+              <td class="px-4 py-3 text-sm font-medium text-ink">Semanas</td>
+              <td class="px-4 py-3 text-sm">Semanas</td>
+              <td class="px-4 py-3 text-sm">Meses</td>
+              <td class="px-4 py-3 text-sm">Inmediata pero sin cambio real</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-6 p-6 bg-emerald-50 border border-emerald-200 rounded-2xl">
+        <p class="text-slate-700"><strong>Conclusión:</strong> si quieres cambios visibles en el día a día y KPIs que muestren adopción y eficiencia, OppsShadow integra observación humana + datos para priorizar mejoras con evidencia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUEVA SECCIÓN 2: PLAN PILOTO Y ROADMAP -->
+  <section id="roadmap" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">Plan piloto y roadmap</h2>
+        <p class="mt-3 text-slate-700">Enfocado a medianas y grandes empresas en implantación o re-implantación de ERP/IA/RPA. Minimiza riesgo y maximiza aprendizaje.</p>
+      </div>
+
+      <div class="mt-10 grid lg:grid-cols-4 gap-6">
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Semana 0</h3>
+          <p class="mt-2 text-sm text-slate-600">Kick-off, definición de procesos/roles, criterios de éxito (errores, tiempo, adopción) y baseline.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Semanas 1–2</h3>
+          <p class="mt-2 text-sm text-slate-600">Shadowing estructurado + activación de analítica. Identificación de fricciones y “doble trabajo”.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Semanas 2–3</h3>
+          <p class="mt-2 text-sm text-slate-600">Informe de hallazgos, priorización y <strong>playbooks por rol</strong> con acciones inmediatas.</p>
+        </div>
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-semibold">Semana 4</h3>
+          <p class="mt-2 text-sm text-slate-600">Medición de impacto y roadmap de escalado (personas, procesos, módulos).</p>
+        </div>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-indigo-50 border border-indigo-200 rounded-2xl">
+          <h4 class="font-semibold text-ink">Entregables</h4>
+          <ul class="mt-2 text-sm text-slate-700 list-disc pl-5 space-y-1">
+            <li>Dashboard de adopción (baseline vs. mejora)</li>
+            <li>Informe de fricciones priorizadas</li>
+            <li>Playbooks por rol (PDF/guía in-app)</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl">
+          <h4 class="font-semibold text-ink">Criterios de éxito</h4>
+          <ul class="mt-2 text-sm text-slate-700 list-disc pl-5 space-y-1">
+            <li>Errores ↓ &nbsp;•&nbsp; Tiempo ↓ &nbsp;•&nbsp; Adopción ↑</li>
+            <li>Satisfacción de usuarios (NPS interno) ↑</li>
+            <li>Quick wins implementados ≥ 3</li>
+          </ul>
+        </div>
+        <div class="p-6 bg-yellow-50 border border-yellow-200 rounded-2xl">
+          <h4 class="font-semibold text-ink">Riesgos y mitigación</h4>
+          <ul class="mt-2 text-sm text-slate-700 list-disc pl-5 space-y-1">
+            <li>Sesgo por perfiles vocales → muestra representativa</li>
+            <li>Datos incompletos → baseline + triangulación</li>
+            <li>Resistencia cultural → champions y comunicación</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section id="galeria" class="py-20 bg-gradient-to-br from-white to-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">Imágenes del proyecto</h2>
+        <p class="mt-3 text-slate-700">Todas las imágenes están en la misma carpeta que este HTML.</p>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="Captura de pantalla 2025-09-30 185058.png" alt="IA y humanos colaborando">
+          <figcaption class="p-4 text-sm text-slate-600">IA al servicio de la adopción</figcaption>
+        </figure>
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="User persona 2.png" alt="User Persona 2">
+          <figcaption class="p-4 text-sm text-slate-600">Stakeholders clave</figcaption>
+        </figure>
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="mujer-disgustada-en-el-trabajo.jpg" alt="Estrés y fricción">
+          <figcaption class="p-4 text-sm text-slate-600">Dónde duele hoy</figcaption>
+        </figure>
+      </div>
+
+      <div class="mt-6 grid md:grid-cols-3 gap-6">
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="representacion-de-persona-que-lleva-una-carga.jpg" alt="Carga operativa">
+          <figcaption class="p-4 text-sm text-slate-600">Reducir la carga operativa</figcaption>
+        </figure>
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="pines-coloridos-y-mapa-de-hilos.jpg" alt="Mapa de procesos">
+          <figcaption class="p-4 text-sm text-slate-600">Mapeo de procesos real</figcaption>
+        </figure>
+        <figure class="bg-white rounded-2xl border border-slate-200 shadow-soft overflow-hidden">
+          <img class="w-full h-48 object-cover" src="vista-lateral-sonriente-colegas-trabajando.jpg" alt="Colaboración en equipo">
+          <figcaption class="p-4 text-sm text-slate-600">Colaboración en equipo</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="p-8 rounded-3xl brand-gradient text-white shadow-bold">
+        <h3 class="text-2xl md:text-3xl font-display font-extrabold">¿Listo para reducir fricción en tu ERP?</h3>
+        <p class="mt-2/90">Agenda una demo y te mostramos quick wins en semanas.</p>
+        <a href="#contacto" class="mt-5 inline-block bg-white text-brand px-5 py-3 rounded-xl font-semibold">Solicitar demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO -->
+  <section id="contacto" class="py-20 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl md:text-4xl font-display font-extrabold">Solicita una demo</h2>
+        <p class="mt-3 text-slate-700">Cuéntanos sobre tu implementación y te contactaremos en breve. También puedes escribir a <a class="underline" href="mailto:mgerico@gmail.com">mgerico@gmail.com</a>.</p>
+      </div>
+
+      <form id="leadForm" class="mt-8 grid grid-cols-1 gap-6 bg-white p-6 md:p-8 rounded-2xl border border-slate-200 shadow-soft">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Nombre y apellidos</label>
+            <input name="name" required type="text" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand" placeholder="Tu nombre completo" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">E-mail</label>
+            <input name="email" required type="email" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand" placeholder="tu@empresa.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Empresa</label>
+            <input name="company" type="text" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand" placeholder="Nombre de tu empresa" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Rol</label>
+            <select name="role" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand">
+              <option value="">Selecciona tu rol</option>
+              <option>Usuario final / Operativo</option>
+              <option>Mando intermedio / Supervisor</option>
+              <option>TI / Implementador / Consultor</option>
+              <option>Alta dirección / Sponsor</option>
+              <option>Gestor del cambio / RRHH</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Tamaño de empresa</label>
+            <select name="company_size" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand">
+              <option value="">Selecciona</option>
+              <option>1–50</option>
+              <option>51–200</option>
+              <option>201–1000</option>
+              <option>1001–5000</option>
+              <option>5000+</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-slate-700">Sistema actual</label>
+            <input name="current_system" type="text" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand" placeholder="ERP / RPA / IA en uso" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-slate-700">Mensaje</label>
+          <textarea name="message" rows="5" class="mt-2 w-full rounded-xl border-slate-300 focus:border-brand focus:ring-brand" placeholder="Cuéntanos brevemente tu situación"></textarea>
+        </div>
+        <div class="flex items-start gap-3">
+          <input id="consent" name="consent" type="checkbox" class="mt-1 rounded border-slate-300 text-brand focus:ring-brand" required />
+          <label for="consent" class="text-sm text-slate-600">Acepto ser contactado y el tratamiento de mis datos para gestionar mi solicitud.</label>
+        </div>
+        <div class="flex items-center gap-4">
+          <button type="submit" class="px-5 py-3 rounded-xl text-white brand-gradient shadow-bold font-semibold">Enviar solicitud</button>
+          <p id="formMsg" class="text-sm text-slate-600"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 border-t border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl brand-gradient"></div>
+          <div>
+            <div class="font-display font-extrabold">OppsShadow</div>
+            <p class="mt-1 text-sm text-slate-600">Shadowing paquetizado + analytics para acelerar la adopción de ERP, IA y automatización.</p>
+          </div>
+        </div>
+        <div>
+          <h4 class="font-semibold">Enlaces</h4>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="#como-funciona" class="hover:text-brand">Cómo funciona</a></li>
+            <li><a href="#segmentos" class="hover:text-brand">Segmentos</a></li>
+            <li><a href="#beneficios" class="hover:text-brand">Beneficios</a></li>
+            <li><a href="#comparativa" class="hover:text-brand">Comparativa</a></li>
+            <li><a href="#roadmap" class="hover:text-brand">Plan piloto</a></li>
+            <li><a href="#galeria" class="hover:text-brand">Imágenes</a></li>
+            <li><a href="#contacto" class="hover:text-brand">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold">Contacto</h4>
+          <p class="mt-3 text-sm"><a class="underline" href="mailto:mgerico@gmail.com">mgerico@gmail.com</a></p>
+          <p class="mt-1 text-xs text-slate-500">© <span id="year"></span> OppsShadow. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Menú móvil
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Año footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== FORM: pega aquí tu endpoint real =====
+    const ENDPOINT_URL = "REPLACE_WITH_ENDPOINT"; // <--- Sustituye por tu URL real
+
+    const leadForm = document.getElementById('leadForm');
+    const formMsg = document.getElementById('formMsg');
+
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formMsg.textContent = "Enviando...";
+      formMsg.className = "text-sm text-slate-600";
+
+      const formData = new FormData(leadForm);
+      const payload = Object.fromEntries(formData.entries());
+
+      if (!payload.email || !payload.name) {
+        formMsg.textContent = "Por favor, completa nombre y e-mail.";
+        formMsg.className = "text-sm text-red-600";
+        return;
+      }
+      if (ENDPOINT_URL === "REPLACE_WITH_ENDPOINT" || ENDPOINT_URL === "#") {
+        formMsg.innerHTML = "⚠️ Añade tu endpoint en el código (busca <code>ENDPOINT_URL</code>) para activar el envío.";
+        formMsg.className = "text-sm text-amber-600";
+        return;
+      }
+
+      try {
+        const res = await fetch(ENDPOINT_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error("Request failed: " + res.status);
+        formMsg.textContent = "¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.";
+        formMsg.className = "text-sm text-emerald-700";
+        leadForm.reset();
+      } catch (err) {
+        console.error(err);
+        formMsg.textContent = "No se pudo enviar. Revisa tu conexión o inténtalo más tarde.";
+        formMsg.className = "text-sm text-red-600";
+      }
+    });
+  </script>
+</body>
+</html>
